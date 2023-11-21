@@ -1,13 +1,10 @@
-package Digitize;
+package digitize;
 
 import java.util.Arrays;
 
 
-
-public class Digitize
-{
-    public static String digitize(long n)
-    {
+public class Digitize {
+    public static String digitize(long n) {
         String number = Long.toString(n);
         int[] numberArray = new int[number.length()];
         int[] reversedArray = new int[number.length()];
@@ -20,8 +17,7 @@ public class Digitize
         return Arrays.toString(reversedArray);
     }
 
-    public static void main (String[]args)
-    {
+    public static void main(String[] args) {
         System.out.println(digitize(12345L));
     }
 }
