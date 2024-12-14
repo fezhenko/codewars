@@ -14,10 +14,11 @@ public class UniqueArrayFinder {
     }
 
     public static void findUniqueArrayValue(int[] array) {
-        Set<Map.Entry<Integer, Long>> entries = Arrays.stream(array)
-                .boxed()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                .entrySet();
+        Set<Map.Entry<Integer, Long>> entries =
+                Arrays.stream(array)
+                        .boxed()
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                        .entrySet();
 
         System.out.println(entries);
     }
