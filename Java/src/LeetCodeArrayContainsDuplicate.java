@@ -85,15 +85,9 @@ public class LeetCodeArrayContainsDuplicate {
      */
     public static boolean containsDuplicateWithSorting(int[] nums) {
         Arrays.sort(nums);
-        int neighbor = 1;
-        for (int i = 0; i < nums.length; i++) {
-            if (neighbor >= nums.length) {
-                break;
-            }
-            if (nums[neighbor] == nums[i]) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i + 1] == nums[i]) {
                 return true;
-            } else {
-                neighbor++;
             }
         }
         return false;
